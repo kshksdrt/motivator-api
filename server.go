@@ -12,7 +12,7 @@ import (
 func main() {
 	r := mux.NewRouter()
 
-	r.HandleFunc("/", func(res http.ResponseWriter, req *http.Request) {
+	r.HandleFunc("/motivate/", func(res http.ResponseWriter, req *http.Request) {
 		if req.Method != "GET" {
 			http.Error(res, "Bad Request", http.StatusBadRequest)
 			return
